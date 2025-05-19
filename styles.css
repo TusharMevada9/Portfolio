@@ -1108,39 +1108,71 @@ footer {
     body {
         cursor: auto;
     }
-    a,
-    .btn,
-    .logo {
+    
+    a, .btn, .logo {
         cursor: pointer;
     }
+    
     .cursor-trailer {
         display: none;
     }
+    
     .hero {
+        padding: 120px 5% 60px;
+    }
+    
+    .hero-content {
         flex-direction: column;
         text-align: center;
-        padding-top: 150px;
+        gap: 40px;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+    }
+    
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-image {
+        width: 300px;
         height: auto;
+        margin: 0 auto;
     }
-    .hero-content {
-        margin-bottom: 50px;
-    }
+    
     .hero-buttons {
         justify-content: center;
     }
+    
     .about-content,
     .contact-container {
         flex-direction: column;
+        padding: 0 20px;
     }
-    .about-image {
-        margin-bottom: 30px;
-    }
+    
+    .about-text,
     .contact-info {
-        margin-bottom: 50px;
+        padding: 30px 20px;
     }
+    
+    .contact-info {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .contact-item {
+        justify-content: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
     .menu-btn {
         display: block;
     }
+    
     nav ul {
         position: fixed;
         top: 0;
@@ -1157,9 +1189,11 @@ footer {
         padding: 50px 0;
         box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
     }
+    
     nav ul.active {
         right: 0;
     }
+    
     nav ul li {
         margin: 15px 0;
     }
@@ -1169,47 +1203,123 @@ footer {
     header {
         padding: 15px 5%;
     }
-    nav ul li {
-        margin-left: 15px;
-    }
+    
     .section-title {
         font-size: 2rem;
+        margin-bottom: 30px;
     }
+    
     .hero {
-        padding: 80px 5%;
+        padding: 100px 5% 40px;
     }
-    .hero-image {
-        width: 320px;
-        height: 400px;
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
     }
-    .hero-content h1 {
-        font-size: 2.8rem;
-    }
-    .hero-content p {
+    
+    .hero-text p {
         font-size: 1.1rem;
-        padding: 0 20px;
     }
+    
+    .hero-image {
+        width: 250px;
+    }
+    
+    .about-info {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    .info-item {
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .about-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
     .project-links {
         grid-template-columns: 1fr;
+    }
+    
+    .skills-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .contact-form {
+        padding: 30px 20px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
     }
 }
 
 @media (max-width: 576px) {
-    nav ul li {
-        margin-left: 10px;
-        font-size: 14px;
+    .hero-text h1 {
+        font-size: 2rem;
     }
-    .hero-content h1 {
-        font-size: 2.5rem;
+    
+    .hero-text p {
+        font-size: 1rem;
     }
-    .hero-content h1 span {
-        font-size: 3rem;
-    }
+    
     .btn {
-        padding: 10px 20px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
     }
+    
     .section-title {
         font-size: 1.8rem;
+    }
+    
+    .about-description h3 {
+        font-size: 1.5rem;
+    }
+    
+    .about-description p {
+        font-size: 1rem;
+    }
+    
+    .contact-info h3 {
+        font-size: 2rem;
+    }
+    
+    .contact-info p {
+        font-size: 1rem;
+    }
+    
+    .contact-item {
+        padding: 15px;
+    }
+    
+    .contact-item i {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .contact-item span {
+        font-size: 1rem;
+    }
+    
+    .social-links a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Fix for iOS input zoom */
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+    select,
+    textarea,
+    input {
+        font-size: 16px;
     }
 }
 
