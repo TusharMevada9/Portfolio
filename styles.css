@@ -582,6 +582,9 @@ nav ul li a.active {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .project-card {
