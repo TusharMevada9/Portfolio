@@ -437,31 +437,60 @@ nav ul li a.active {
 
 @media (max-width: 768px) {
     .hero {
-        padding: 80px 5%;
+        padding: 100px 5% 60px;
+        min-height: auto;
     }
 
     .hero-content {
         flex-direction: column-reverse;
         text-align: center;
-        gap: 30px;
+        gap: 40px;
+        padding: 1rem;
     }
 
     .hero-text {
         max-width: 100%;
     }
 
-    .hero-image {
-        width: 320px;
-        height: 400px;
-        margin: 0 auto;
+    .hero-text h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
     }
 
-    .hero-text h1 {
-        font-size: 2.8rem;
+    .hero-text p {
+        font-size: 1.1rem;
+        margin: 20px 0 30px;
+        padding: 0 10px;
+    }
+
+    .hero-image {
+        width: 280px;
+        height: 350px;
+        margin: 0 auto 20px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .hero-buttons {
         justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        padding: 0 10px;
+        margin-top: 30px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        padding: 14px 24px;
+        font-size: 0.9rem;
     }
 }
 
@@ -1121,13 +1150,14 @@ footer {
     }
     
     .hero {
-        padding: 120px 5% 60px;
+        padding: 110px 5% 50px;
     }
     
     .hero-content {
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: center;
-        gap: 40px;
+        gap: 35px;
+        padding: 1.5rem;
     }
     
     .hero-text {
@@ -1136,16 +1166,28 @@ footer {
     
     .hero-text h1 {
         font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero-text p {
+        margin: 20px 0 30px;
     }
     
     .hero-image {
-        width: 300px;
-        height: auto;
-        margin: 0 auto;
+        width: 320px;
+        height: 400px;
+        margin: 0 auto 20px;
     }
     
     .hero-buttons {
         justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    
+    .hero-buttons .btn {
+        flex: 0 0 auto;
+        min-width: 200px;
     }
     
     .about-content,
@@ -1204,116 +1246,330 @@ footer {
 
 @media (max-width: 768px) {
     header {
-        padding: 15px 5%;
+        padding: 12px 5%;
+    }
+    
+    .logo {
+        font-size: 1.4rem;
     }
     
     .section-title {
-        font-size: 2rem;
-        margin-bottom: 30px;
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+        padding: 0 20px;
     }
     
-    .hero {
-        padding: 100px 5% 40px;
+    section {
+        padding: 60px 0;
     }
     
-    .hero-text h1 {
-        font-size: 2.5rem;
+    .about {
+        padding: 60px 0;
     }
     
-    .hero-text p {
-        font-size: 1.1rem;
+    .about-content {
+        padding: 0 20px;
     }
     
-    .hero-image {
-        width: 250px;
+    .about-text {
+        padding: 30px 20px;
+        margin-top: 20px;
+    }
+    
+    .about-description h3 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+    
+    .about-description p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 25px;
     }
     
     .about-info {
         grid-template-columns: 1fr;
-        padding: 20px;
+        padding: 20px 15px;
+        gap: 15px;
+        margin: 20px 0;
     }
     
     .info-item {
         text-align: center;
-        padding: 15px;
+        padding: 15px 10px;
     }
     
     .about-buttons {
         flex-direction: column;
         gap: 15px;
+        margin-top: 25px;
+    }
+    
+    .about-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
     }
     
     .project-links {
         grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .project-card {
+        padding: 25px 20px;
+        margin-bottom: 30px;
+    }
+    
+    .project-image {
+        height: 250px;
+        margin-bottom: 25px;
+    }
+    
+    .project-image img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .project-info h3 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+    
+    .project-info p {
+        font-size: 1rem;
+        margin-bottom: 20px;
     }
     
     .skills-container {
         flex-direction: column;
         gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .skills-column {
+        padding: 25px 20px;
+    }
+    
+    .contact-container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 20px;
+    }
+    
+    .contact-info {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .contact-info h3 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .contact-info p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    .contact-item {
+        padding: 15px;
+        margin-bottom: 15px;
     }
     
     .contact-form {
         padding: 30px 20px;
+        width: 100%;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
     }
     
     .form-group input,
     .form-group textarea {
         font-size: 16px; /* Prevents zoom on iOS */
+        padding: 14px 15px;
+    }
+    
+    .experience-container,
+    .education-container {
+        padding: 0 20px;
+    }
+    
+    .experience-item,
+    .education-item {
+        padding: 30px 20px;
+        margin-bottom: 25px;
+    }
+    
+    .experience-item h3,
+    .education-item h3 {
+        font-size: 1.5rem;
+    }
+    
+    .services-grid {
+        padding: 0 20px;
+        gap: 25px;
+    }
+    
+    .service-card {
+        padding: 25px 20px;
     }
 }
 
 @media (max-width: 576px) {
+    .hero {
+        padding: 90px 4% 50px;
+    }
+    
+    .hero-content {
+        gap: 30px;
+        padding: 0.5rem;
+    }
+    
     .hero-text h1 {
         font-size: 2rem;
+        margin-bottom: 15px;
     }
     
     .hero-text p {
         font-size: 1rem;
+        margin: 15px 0 25px;
+        padding: 0 5px;
+    }
+    
+    .hero-image {
+        width: 240px;
+        height: 300px;
+        margin-bottom: 15px;
+    }
+    
+    .hero-buttons {
+        gap: 12px;
+        margin-top: 25px;
+    }
+    
+    .hero-buttons .btn {
+        padding: 12px 20px;
+        font-size: 0.85rem;
+        max-width: 100%;
     }
     
     .btn {
         padding: 12px 20px;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
     
     .section-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+        padding: 0 15px;
+    }
+    
+    section {
+        padding: 50px 0;
+    }
+    
+    .about {
+        padding: 50px 0;
+    }
+    
+    .about-content {
+        padding: 0 15px;
+    }
+    
+    .about-text {
+        padding: 25px 15px;
     }
     
     .about-description h3 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        margin-bottom: 12px;
     }
     
     .about-description p {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+    
+    .about-info {
+        padding: 15px 10px;
+        gap: 12px;
+    }
+    
+    .about-buttons {
+        margin-top: 20px;
+    }
+    
+    .project-card {
+        padding: 20px 15px;
+    }
+    
+    .project-image {
+        height: 220px;
+        margin-bottom: 20px;
+    }
+    
+    .project-image img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .project-info h3 {
+        font-size: 1.4rem;
     }
     
     .contact-info h3 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .contact-info p {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
     
     .contact-item {
-        padding: 15px;
+        padding: 12px;
+        margin-bottom: 12px;
     }
     
     .contact-item i {
         width: 40px;
         height: 40px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        margin-right: 15px;
     }
     
     .contact-item span {
-        font-size: 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .contact-form {
+        padding: 25px 15px;
+    }
+    
+    .social-links {
+        gap: 15px;
+        margin-top: 20px;
     }
     
     .social-links a {
         width: 45px;
         height: 45px;
         font-size: 1.2rem;
+    }
+    
+    .experience-item,
+    .education-item {
+        padding: 25px 15px;
+    }
+    
+    .services-grid {
+        gap: 20px;
+    }
+    
+    .service-card {
+        padding: 20px 15px;
     }
 }
 
