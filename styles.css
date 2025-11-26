@@ -2000,3 +2000,12 @@ footer {
         transform: rotate(360deg);
     }
 }
+
+@keyframes lightSweep {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
